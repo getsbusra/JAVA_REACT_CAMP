@@ -25,11 +25,32 @@ public class Main {
         student2.setUserPassword("12345");
         student2.setMyCourses("C#/Angular Kursu");
         
+        //USER MANAGER DENEMELERİ
         User user = new User();
         UserManager userManager = new UserManager();
-        userManager.editProfile(student1);
+        userManager.login(user);
+        userManager.logOut(user);
+        userManager.editProfile(user);
+        userManager.addAddress(user);
+        userManager.contact(user);
+        
+        //STUDENT MANAGER DENEMELERİ
         StudentManager studentManager = new StudentManager();
         studentManager.addCourse();
+        studentManager.removeCourse();
+        studentManager.takeAttendance();
+        studentManager.addCardorChange();
+        studentManager.viewCourseSchedule();
+        studentManager.comment();
+        studentManager.finishAndContinue();
+        
+        //INSTRUCTOR MANAGER DENEMELERİ
+        InstructorManager instructorManager = new InstructorManager();
+        instructorManager.viewStudents();
+        instructorManager.addRecord();
+        instructorManager.takeAttendance();
+        instructorManager.uploadHomework();
+        instructorManager.sendAnnouncement();
         
         
 
